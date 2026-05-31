@@ -1,0 +1,56 @@
+# ============================================================
+# data.yaml — Semua metadata Tugas Akhir
+# Edit file ini saja untuk menyesuaikan template
+# ============================================================
+
+kode-mk: "EF234801"
+
+judul:
+  id: "Perancangan Sistem Rekomendasi Author dengan Perlindungan Privasi Query Menggunakan Homomorphic Inference"
+  en: "Design of an Author Recommendation System with Query Privacy Protection Using Homomorphic Inference"
+
+mahasiswa:
+  nama: "Ricardo Supriyanto"
+  nrp: "5025221218"
+
+pembimbing:
+  nama: "Moch. Nafkhan Alzamzami, S.T., M.T."
+  nip: "199911222024061001"
+
+ko-pembimbing:
+  - nama: "Ilham Gurat Adillion, S.Kom., M.Eng."
+    nip: "1995202411009"
+  - nama: "Prof. Ir. Ary Mazharuddin Shiddiqi, S.Kom., M.Comp.Sc., Ph.D."
+    nip: "198106202005011003"
+
+penguji:
+  - nama: "<Nama dan gelar penguji>"
+    label:
+      id: "Penguji"
+      en: "Examiner 1"
+  - nama: "<Nama dan gelar penguji>"
+    label:
+      id: "Penguji"
+      en: "Examiner 2"
+
+institusi:
+  prodi:
+    id: "Program Studi S-1 Teknik Informatika"
+    en: "Undergraduate Study Program of Informatics"
+  departemen:
+    id: "Departemen Teknik Informatika"
+    en: "Department of Informatics"
+  fakultas:
+    id: "Fakultas Teknologi Elektro dan Informatika Cerdas"
+    en: "Faculty of Intelligent Electrical and Informatics Technology"
+  nama: "Institut Teknologi Sepuluh Nopember"
+  kota: "Surabaya"
+
+tahun: "2026"
+bulan:
+  id: "Januari"
+  en: "January"
+
+kata-kunci:
+  id: "sistem rekomendasi author, privasi query, homomorphic inference, fully homomorphic encryption, concrete"
+  en: "author recommendation system, query privacy, homomorphic inference, fully homomorphic encryption, concrete"
