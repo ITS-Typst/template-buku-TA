@@ -1,6 +1,5 @@
 // ============================================================
-// template.typ — Main template function (show: template)
-// Terinspirasi dari pola abmas-palo-alto/drpm
+// AUTO — Page setup, tipografi, dan show rules heading. Jangan diubah.
 // ============================================================
 
 #import "lib.typ": *
@@ -71,9 +70,11 @@
     if it.numbering != none {
       pagebreak(weak: true)
       context if calc.even(here().page()) {
-        align(center + horizon)[
+        v(1fr)
+        align(center)[
           text(style: "italic")[Halaman ini sengaja dikosongkan.]
         ]
+        v(1fr)
         pagebreak()
       }
     } else {
@@ -108,6 +109,15 @@
     block(above: 0.8em, below: 0.4em,
       text(size: 12pt, weight: "bold")[
         #counter(heading).display("1.1.1") #h(0.4em) #it.body
+      ]
+    )
+  }
+
+  show heading.where(level: 4): it => {
+    v(0.2em, weak: true)
+    block(above: 0.6em, below: 0.3em,
+      text(size: 12pt, weight: "bold")[
+        #counter(heading).display("1.1.1.1") #h(0.4em) #it.body
       ]
     )
   }

@@ -1,8 +1,6 @@
 // ============================================================
-// lampiran.typ — Lampiran (di-render via template appendices)
+// OPSIONAL EDIT — Lampiran: hapus isi jika tidak ada lampiran
 // ============================================================
-// File ini di-include di main.typ melalui parameter appendices
-// pada template(), bukan dipanggil langsung.
 
 = Kode Sumber Lengkap
 

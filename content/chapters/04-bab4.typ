@@ -1,5 +1,5 @@
 // ============================================================
-// bab4.typ — BAB 4: PERANCANGAN DAN IMPLEMENTASI
+// WAJIB EDIT — BAB 4: Perancangan dan Implementasi
 // ============================================================
 
 = PERANCANGAN DAN IMPLEMENTASI

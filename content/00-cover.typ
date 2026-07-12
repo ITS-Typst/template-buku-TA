@@ -1,30 +1,22 @@
 // ============================================================
-// cover.typ — Halaman sampul ITS sesuai template resmi
-// ============================================================
-// Desain:
-//   Outer cover (sampul luar): background biru penuh, band putih atas
-//   Inner cover (halaman dalam): background putih, logo + stripe biru
+// AUTO — Halaman sampul luar (biru) dan dalam (putih), data dari data.yaml
 // ============================================================
 
-#import "lib.typ": *
+#import "../template/lib.typ": *
 
-// ── Warna ITS brand ───────────────────────────────────────
-#let its-blue  = rgb(0, 103, 171)     // #0067AB — warna resmi ITS
+// Warna ITS brand
+#let its-blue  = rgb(0, 103, 171)
 #let its-white = white
 
-// ── Logo ITS: full horizontal (gear + iTS + teks) ─────────
-// assets/brand/Logo-ITS-Biru.png — logo biru, gunakan di background putih
-// Untuk background biru (on-blue: true), butuh versi putih logo (belum tersedia)
+// Logo ITS: full horizontal
 #let logo-full(on-blue: false) = {
-  image("assets/brand/Logo-ITS-Biru.png", height: 2.2cm)
+  image("../assets/brand/Logo-ITS-Biru.png", height: 2.2cm)
 }
 
-// ── Logo ITS: horizontal (untuk inner cover) ───────────────
-#let logo-gear() = image("assets/brand/Logo-ITS-Biru.png", height: 2cm)
+// Logo ITS: horizontal (untuk inner cover)
+#let logo-gear() = image("../assets/brand/Logo-ITS-Biru.png", height: 2cm)
 
-// ────────────────────────────────────────────────────────
 // OUTER COVER — halaman berwarna biru penuh
-// ────────────────────────────────────────────────────────
 #let _outer-cover(data, lang: "id") = {
   let judul      = if lang == "id" { data.judul.id } else { data.judul.en }
   let tipe       = if lang == "id" { "TUGAS AKHIR" } else { "FINAL PROJECT" }
@@ -43,7 +35,7 @@
     numbering: none,
   )
 
-  // ── Band putih atas dengan logo ───────────────────────
+  // Band putih atas dengan logo
   block(
     fill: its-white,
     width: 100%,
@@ -52,25 +44,22 @@
     logo-full(on-blue: false),
   )
 
-  // ── Konten biru di bawah band ────────────────────────
+  // Konten biru di bawah band
   pad(left: 4cm, right: 3cm, top: 1.2cm, bottom: 2.5cm)[
-    #set text(fill: its-white, font: "Times New Roman")
+    #set text(fill: its-white, font: "Trebuchet MS")
     #set par(first-line-indent: 0pt, justify: false)
 
     // Kode MK
     #text(size: 12pt)[#tipe – #data.kode-mk]
-
     #v(1.8cm)
 
     // Judul
     #text(size: 16pt, weight: "bold")[#upper(judul)]
-
     #v(1.8cm)
 
     // Mahasiswa
     #text(size: 12pt)[#data.mahasiswa.nama] \
     #text(size: 12pt)[NRP #data.mahasiswa.nrp]
-
     #v(1cm)
 
     // Pembimbing
@@ -97,9 +86,7 @@
   ]
 }
 
-// ────────────────────────────────────────────────────────
 // INNER COVER — halaman putih dengan logo + stripe biru
-// ────────────────────────────────────────────────────────
 #let _inner-cover(data, lang: "id") = {
   let judul      = if lang == "id" { data.judul.id } else { data.judul.en }
   let tipe       = if lang == "id" { "TUGAS AKHIR" } else { "FINAL PROJECT" }
@@ -117,10 +104,9 @@
     footer: none,
     numbering: none,
   )
-  set text(font: "Times New Roman")
+  set text(font: "Trebuchet MS")
   set par(first-line-indent: 0pt, justify: false)
 
-  // ── Logo + stripe ─────────────────────────────────────
   // Blok atas: logo gear di kiri (3cm dari kiri, 1cm dari atas)
   block(width: 100%, height: 4cm)[
     #pad(left: 3.5cm, top: 0.8cm)[
@@ -130,23 +116,20 @@
   // Stripe biru horizontal
   block(fill: its-blue, width: 100%, height: 0.9cm)
 
-  // ── Konten di bawah stripe ────────────────────────────
+  // Konten di bawah stripe
   pad(left: 4cm, right: 3cm, top: 1.2cm, bottom: 2.5cm)[
 
     // Kode MK
     #text(size: 12pt)[#tipe – #data.kode-mk]
-
     #v(1.5cm)
 
     // Judul — bold italic sesuai template
     #text(size: 14pt, weight: "bold", style: "italic")[#upper(judul)]
-
     #v(1.5cm)
 
     // Mahasiswa
     #data.mahasiswa.nama \
     NRP #data.mahasiswa.nrp
-
     #v(0.8cm)
 
     // Pembimbing
@@ -173,27 +156,16 @@
   ]
 }
 
-// ────────────────────────────────────────────────────────
 // PUBLIC: semua halaman sampul
-// ────────────────────────────────────────────────────────
-#let _blank-page() = {
-  set page(paper: "a4", margin: 0cm, fill: white, numbering: none, header: none, footer: none)
-  align(center + horizon)[
-    #text(font: "Times New Roman", size: 12pt, style: "italic")[
-      Halaman ini sengaja dikosongkan.
-    ]
-  ]
-}
-
 #let halaman-sampul(data) = {
   // Hal 1: sampul luar biru (Indonesia)
   _outer-cover(data, lang: "id")
   // Hal 2: kosong
-  pagebreak(); _blank-page()
+  halaman-kosong()
   // Hal 3: sampul dalam putih (Indonesia)
   pagebreak(); _inner-cover(data, lang: "id")
   // Hal 4: kosong
-  pagebreak(); _blank-page()
+  halaman-kosong()
   // Hal 5: sampul dalam putih (Inggris) — tidak ada outer biru EN
   pagebreak(); _inner-cover(data, lang: "en")
 }

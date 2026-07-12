@@ -1,5 +1,5 @@
 // ============================================================
-// bab5.typ — BAB 5: PENGUJIAN DAN EVALUASI
+// WAJIB EDIT — BAB 5: Pengujian dan Evaluasi
 // ============================================================
 
 = PENGUJIAN DAN EVALUASI

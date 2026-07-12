@@ -1,5 +1,5 @@
 # ============================================================
-# data.yaml — Semua metadata Tugas Akhir
+# Semua metadata Tugas Akhir
 # Edit file ini saja untuk menyesuaikan template
 # ============================================================
 
@@ -50,7 +50,3 @@ tahun: "2026"
 bulan:
   id: "Januari"
   en: "January"
-
-kata-kunci:
-  id: "sistem rekomendasi author, privasi query, homomorphic inference, fully homomorphic encryption, concrete"
-  en: "author recommendation system, query privacy, homomorphic inference, fully homomorphic encryption, concrete"

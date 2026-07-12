@@ -1,5 +1,5 @@
 // ============================================================
-// bab2.typ — BAB 2: TINJAUAN PUSTAKA
+// WAJIB EDIT — BAB 2: Tinjauan Pustaka
 // ============================================================
 
 = TINJAUAN PUSTAKA
