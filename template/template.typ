@@ -17,19 +17,20 @@
         else { align(left, pnum) }
       }
     },
-    // Blank pages (inserted oleh pagebreak(to:"odd") sebelum bab/lampiran bernomor)
-    // dideteksi via query: halaman genap yang halaman berikutnya = awal heading bernomor.
+    // Satu tempat untuk teks "Halaman ini sengaja dikosongkan." — dua sumber:
+    // 1. halaman-kosong() eksplisit → marker <halaman-kosong>
+    // 2. pagebreak(to:"odd") otomatis sebelum bab/lampiran → halaman genap
+    //    yang halaman berikutnya adalah heading level-1 bernomor
     foreground: context {
       let cur = here().page()
-      if calc.even(cur) {
-        let is-blank = query(heading.where(level: 1)).any(h =>
-          h.numbering != none and h.location().page() == cur + 1
+      let explicit = query(<halaman-kosong>).any(m => m.location().page() == cur)
+      let before-bab = calc.even(cur) and query(heading.where(level: 1)).any(h =>
+        h.numbering != none and h.location().page() == cur + 1
+      )
+      if explicit or before-bab {
+        place(top + center, dy: 3cm,
+          text(style: "italic")[Halaman ini sengaja dikosongkan.]
         )
-        if is-blank {
-          place(center + horizon,
-            text(style: "italic")[Halaman ini sengaja dikosongkan.]
-          )
-        }
       }
     },
   )
@@ -106,7 +107,7 @@
   show heading.where(level: 2): it => {
     v(0.5em, weak: true)
     block(above: 1em, below: 0.5em,
-      text(size: 12pt, weight: "bold")[
+      text(size: 13pt, weight: "bold")[
         #counter(heading).display("1.1") #h(0.4em) #it.body
       ]
     )
@@ -124,7 +125,7 @@
   show heading.where(level: 4): it => {
     v(0.2em, weak: true)
     block(above: 0.6em, below: 0.3em,
-      text(size: 12pt, weight: "bold")[
+      text(size: 12pt, weight: "regular")[
         #counter(heading).display("1.1.1.1") #h(0.4em) #it.body
       ]
     )
