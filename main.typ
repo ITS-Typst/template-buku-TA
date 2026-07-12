@@ -98,4 +98,4 @@
 // ── Daftar Pustaka ────────────────────────────────────────
 #pagebreak()
 #headz[DAFTAR PUSTAKA]
-#bibliography("daftar-pustaka.bib", title: none, style: "ieee")
+#bibliography("daftar-pustaka.bib", title: none, style: "american-psychological-association")

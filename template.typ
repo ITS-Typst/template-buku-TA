@@ -6,14 +6,21 @@
 #import "lib.typ": *
 
 #let template(appendices: none, body) = {
-  // ── Page setup ─────────────────────────────────────────
+  // Page setup
   set page(
     paper: "a4",
-    margin: (left: 4cm, right: 3cm, top: 3cm, bottom: 3cm),
-    number-align: center,
+    margin: (left: 3cm, right: 2cm, top: 3cm, bottom: 2.5cm),
+    footer: context {
+      let fmt = here().page-numbering()
+      if fmt != none {
+        let pnum = counter(page).display(fmt)
+        if calc.odd(here().page()) { align(right, pnum) }
+        else { align(left, pnum) }
+      }
+    },
   )
 
-  // ── Typography ─────────────────────────────────────────
+  // Typography
   set text(
     font: "Times New Roman",
     size: 12pt,
@@ -29,11 +36,11 @@
     linebreaks: "optimized",
   )
 
-  // ── List & enum ────────────────────────────────────────
+  // List & enum
   set enum(indent: 1.25cm, body-indent: 0.5em)
   set list(indent: 1.25cm, body-indent: 0.5em)
 
-  // ── Figure numbering: Gambar 1.1 per bab ───────────────
+  // Figure numbering: Gambar 1.1 per bab
   set figure(
     numbering: (..n) => {
       let h = counter(heading).get()
@@ -45,12 +52,12 @@
   show figure.caption: set text(size: 11pt)
   show figure.where(kind: table): set figure.caption(position: top)
 
-  // ── Table styling ──────────────────────────────────────
+  // Table styling
   show table: set text(size: 11pt)
   show table: set par(justify: false, first-line-indent: 0pt)
   set table(stroke: 0.5pt, inset: 6pt)
 
-  // ── Heading setup + figure counter reset per bab ───────
+  // Heading setup + figure counter reset per bab
   set heading(numbering: "1.1.1.")
 
   show heading.where(level: 1): it => {
@@ -59,7 +66,20 @@
     counter(figure.where(kind: table)).update(0)
     counter(figure.where(kind: "kode")).update(0)
 
-    pagebreak(weak: true)
+    // Bab bernomor: mulai di halaman ganjil (cetak bolak-balik)
+    // Jika bab sebelumnya habis di halaman ganjil, sisipkan blank page genap
+    if it.numbering != none {
+      pagebreak(weak: true)
+      context if calc.even(here().page()) {
+        align(center + horizon)[
+          text(style: "italic")[Halaman ini sengaja dikosongkan.]
+        ]
+        pagebreak()
+      }
+    } else {
+      pagebreak(weak: true)
+    }
+
     v(0.5cm)
     align(center)[
       #block(above: 0pt, below: 0pt,
@@ -92,13 +112,13 @@
     )
   }
 
-  // ── Outline (TOC) entries — spacing antar entri ───────
+  // Outline (TOC) entries — spacing antar entri
   show outline.entry: set block(above: 0.5em)
 
-  // ── Body ───────────────────────────────────────────────
+  // Body
   body
 
-  // ── Lampiran (appendices) ─────────────────────────────
+  // Lampiran (appendices)
   if appendices != none {
     pagebreak(weak: true)
     counter(heading).update(0)
@@ -116,7 +136,19 @@
     )
 
     show heading.where(level: 1): it => {
-      pagebreak(weak: true)
+      // Lampiran bernomor: mulai di halaman ganjil (cetak bolak-balik)
+      if it.numbering != none {
+        pagebreak(weak: true)
+        context if calc.even(here().page()) {
+          align(center + horizon)[
+            text(style: "italic")[Halaman ini sengaja dikosongkan.]
+          ]
+          pagebreak()
+        }
+      } else {
+        pagebreak(weak: true)
+      }
+
       v(0.5cm)
       align(center)[
         #block(above: 0pt, below: 0pt,

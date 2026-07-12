@@ -9,46 +9,18 @@
 #import "lib.typ": *
 
 // ── Warna ITS brand ───────────────────────────────────────
-#let its-blue  = rgb(0, 103, 172)     // #0067AC — warna resmi ITS
+#let its-blue  = rgb(0, 103, 171)     // #0067AB — warna resmi ITS
 #let its-white = white
 
 // ── Logo ITS: full horizontal (gear + iTS + teks) ─────────
-// Gunakan file resmi jika tersedia, fallback ke rekonstruksi
+// assets/brand/Logo-ITS-Biru.png — logo biru, gunakan di background putih
+// Untuk background biru (on-blue: true), butuh versi putih logo (belum tersedia)
 #let logo-full(on-blue: false) = {
-  let txt-color = if on-blue { its-white } else { its-blue }
-  if "assets/logo-its-full.png" != "" {
-    // Ganti kondisi ini dengan: image("assets/logo-its-full.png", height: 2.2cm)
-    // setelah file logo-its-full.png disimpan ke folder assets/
-    grid(
-      columns: (auto, auto),
-      column-gutter: 0.5cm,
-      align: horizon,
-      // Gear di kotak biru (untuk logo di background putih)
-      if on-blue {
-        image("assets/logo-its.png", height: 2.2cm)
-      } else {
-        box(
-          fill: its-blue,
-          radius: 2pt,
-          inset: 4pt,
-          image("assets/logo-its.png", height: 1.8cm),
-        )
-      },
-      stack(
-        spacing: 1pt,
-        text(font: "Arial", size: 24pt, weight: "bold", fill: txt-color)[iTS],
-        text(font: "Arial", size: 9pt, fill: txt-color)[
-          Institut \
-          Teknologi \
-          Sepuluh Nopember
-        ],
-      ),
-    )
-  }
+  image("assets/brand/Logo-ITS-Biru.png", height: 2.2cm)
 }
 
-// ── Logo ITS: hanya lambang gear (untuk inner cover) ──────
-#let logo-gear() = image("assets/logo-its.png", height: 2cm)
+// ── Logo ITS: horizontal (untuk inner cover) ───────────────
+#let logo-gear() = image("assets/brand/Logo-ITS-Biru.png", height: 2cm)
 
 // ────────────────────────────────────────────────────────
 // OUTER COVER — halaman berwarna biru penuh

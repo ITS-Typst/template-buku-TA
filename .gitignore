@@ -1,0 +1,22 @@
+# Typst compiled output
+main.pdf
+
+# Typst cache
+.typst/
+
+# Python
+__pycache__/
+*.pyc
+*.py.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo

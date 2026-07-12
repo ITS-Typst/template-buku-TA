@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.typ]
+indent_size = 2
+
+[*.yaml]
+indent_size = 2
+
+[*.md]
+# Trailing spaces punya makna di Markdown (line break), jangan di-trim
+trim_trailing_whitespace = false
+
+[*.bib]
+indent_size = 2

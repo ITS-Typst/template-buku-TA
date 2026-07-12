@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    // Typst: preview real-time, syntax highlight, autocomplete, formatter
+    "myriad-dreamin.tinymist",
+    // EditorConfig: enforce .editorconfig di VSCode
+    "editorconfig.editorconfig"
+  ]
+}

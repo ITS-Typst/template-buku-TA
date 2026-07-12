@@ -1,0 +1,33 @@
+{
+  // File encoding & line endings
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Editor defaults
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+  "editor.wordWrap": "on",
+
+  // Typst (Tinymist)
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+
+  // YAML
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+
+  // Typst preview: buka di samping editor
+  "tinymist.preview.sidebarEnabled": true,
+
+  // File associations
+  "files.associations": {
+    "*.typ": "typst"
+  }
+}
