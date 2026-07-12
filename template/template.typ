@@ -17,6 +17,21 @@
         else { align(left, pnum) }
       }
     },
+    // Blank pages (inserted oleh pagebreak(to:"odd") sebelum bab/lampiran bernomor)
+    // dideteksi via query: halaman genap yang halaman berikutnya = awal heading bernomor.
+    foreground: context {
+      let cur = here().page()
+      if calc.even(cur) {
+        let is-blank = query(heading.where(level: 1)).any(h =>
+          h.numbering != none and h.location().page() == cur + 1
+        )
+        if is-blank {
+          place(center + horizon,
+            text(style: "italic")[Halaman ini sengaja dikosongkan.]
+          )
+        }
+      }
+    },
   )
 
   // Typography
@@ -65,18 +80,11 @@
     counter(figure.where(kind: table)).update(0)
     counter(figure.where(kind: "kode")).update(0)
 
-    // Bab bernomor: mulai di halaman ganjil (cetak bolak-balik)
-    // Jika bab sebelumnya habis di halaman ganjil, sisipkan blank page genap
+    // Bab bernomor: mulai di halaman ganjil (cetak bolak-balik).
+    // pagebreak(to:"odd") stabil (tidak memicu convergence loop).
+    // Teks blank page ditambahkan via foreground di set page di atas.
     if it.numbering != none {
-      pagebreak(weak: true)
-      context if calc.even(here().page()) {
-        v(1fr)
-        align(center)[
-          text(style: "italic")[Halaman ini sengaja dikosongkan.]
-        ]
-        v(1fr)
-        pagebreak()
-      }
+      pagebreak(to: "odd")
     } else {
       pagebreak(weak: true)
     }
@@ -146,15 +154,10 @@
     )
 
     show heading.where(level: 1): it => {
-      // Lampiran bernomor: mulai di halaman ganjil (cetak bolak-balik)
+      // Lampiran bernomor: mulai di halaman ganjil (cetak bolak-balik).
+      // Teks blank page ditambahkan via foreground (sama seperti bab).
       if it.numbering != none {
-        pagebreak(weak: true)
-        context if calc.even(here().page()) {
-          align(center + horizon)[
-            text(style: "italic")[Halaman ini sengaja dikosongkan.]
-          ]
-          pagebreak()
-        }
+        pagebreak(to: "odd")
       } else {
         pagebreak(weak: true)
       }

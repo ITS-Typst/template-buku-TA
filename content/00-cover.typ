@@ -10,11 +10,11 @@
 
 // Logo ITS: full horizontal
 #let logo-full(on-blue: false) = {
-  image("../assets/brand/Logo-ITS-Biru.png", height: 2.2cm)
+  image("../assets/brand/Logo-ITS-Biru.png", height: 2.8cm)
 }
 
 // Logo ITS: horizontal (untuk inner cover)
-#let logo-gear() = image("../assets/brand/Logo-ITS-Biru.png", height: 2cm)
+#let logo-gear() = image("../assets/brand/Logo-ITS-Biru.png", height: 2.8cm)
 
 // OUTER COVER — halaman berwarna biru penuh
 #let _outer-cover(data, lang: "id") = {
@@ -40,7 +40,7 @@
     fill: its-white,
     width: 100%,
     height: 4cm,
-    inset: (left: 3.5cm, right: 3cm, top: 0.75cm, bottom: 0.75cm),
+    inset: (left: 3cm, right: 3cm, top: 0.75cm, bottom: 0.75cm),
     logo-full(on-blue: false),
   )
 

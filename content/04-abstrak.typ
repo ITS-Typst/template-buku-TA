@@ -71,8 +71,8 @@
 }
 
 #let halaman-abstrak(data) = {
-  _render(data, lang: "id", body: id, kw: kata-kunci-id)
+  _render(data, "id", id, kata-kunci-id)
   halaman-kosong()
-  _render(data, lang: "en", body: en, kw: kata-kunci-en)
+  _render(data, "en", en, kata-kunci-en)
   halaman-kosong()
 }
