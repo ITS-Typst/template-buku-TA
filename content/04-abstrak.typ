@@ -34,10 +34,10 @@
 
 #let _render(data, lang, body, kw) = {
   let judul-hal = if lang == "id" { "ABSTRAK" } else { "ABSTRACT" }
-  let judul-ta  = if lang == "id" { data.judul.id } else { data.judul.en }
-  let kw-label  = if lang == "id" { "Kata kunci" } else { "Keywords" }
+  let judul-ta = if lang == "id" { data.judul.id } else { data.judul.en }
+  let kw-label = if lang == "id" { "Kata kunci" } else { "Keywords" }
   let abs-label = if lang == "id" { "Abstrak" } else { "Abstract" }
-  let dept-val  = if lang == "id" { "Teknik Informatika FTEIC – ITS" } else { "Informatics ELECTICS – ITS" }
+  let dept-val = if lang == "id" { "Teknik Informatika FTEIC – ITS" } else { "Informatics ELECTICS – ITS" }
 
   headz[#judul-hal]
   set par(first-line-indent: 0pt)

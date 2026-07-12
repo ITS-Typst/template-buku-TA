@@ -1,5 +1,6 @@
 # Typst compiled output
 main.pdf
+LAPORAN TA - *.pdf
 
 # Typst cache
 .typst/
