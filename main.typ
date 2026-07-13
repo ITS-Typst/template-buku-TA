@@ -4,12 +4,13 @@
 
 #import "template/lib.typ": *
 #import "template/template.typ": template
-#import "content/00-cover.typ": halaman-sampul
-#import "content/01-lembar-pengesahan.typ": lembar-pengesahan
-#import "content/02-pernyataan-orisinalitas.typ": pernyataan-orisinalitas
-#import "content/03-pernyataan-ai.typ": pernyataan-ai
-#import "content/04-abstrak.typ": halaman-abstrak
-#import "content/05-kata-pengantar.typ": kata-pengantar
+#import "content/00-cover.typ": halaman-cover
+#import "content/01-halaman-judul.typ": halaman-judul
+#import "content/02-lembar-pengesahan.typ": lembar-pengesahan
+#import "content/03-pernyataan-orisinalitas.typ": pernyataan-orisinalitas
+#import "content/04-pernyataan-ai.typ": pernyataan-ai
+#import "content/05-abstrak.typ": halaman-abstrak
+#import "content/06-kata-pengantar.typ": kata-pengantar
 
 // Load metadata dari data.yaml
 #let data = yaml("data.yaml")
@@ -28,9 +29,14 @@
 // ============================================================
 // HALAMAN SAMPUL (tanpa nomor halaman)
 // ============================================================
-// 1–3. Cover luar (biru) + sampul dalam ID + sampul dalam EN
+// 1. Cover luar (biru)
 #set page(numbering: none)
-#halaman-sampul(data)
+#halaman-cover(data)
+#halaman-kosong()
+
+// 2. Halaman judul dalam ID + EN
+#pagebreak()
+#halaman-judul(data)
 
 // ============================================================
 // FRONT MATTER — penomoran romawi
@@ -38,50 +44,50 @@
 #set page(numbering: "i")
 #counter(page).update(1)
 
-// 4–5. Lembar Pengesahan ID + EN
+// Lembar Pengesahan ID + EN
 #lembar-pengesahan(data)
 
-// 6–7. Pernyataan Orisinalitas ID + EN
+// Pernyataan Orisinalitas ID + EN
 #pernyataan-orisinalitas(data)
 
-// 8. Pernyataan Kode Etik Penggunaan AI Generatif
+// Pernyataan Kode Etik Penggunaan AI Generatif
 #pernyataan-ai(data)
 #halaman-kosong()
 
-// 9–10. Abstrak — edit di content/04-abstrak.typ
+// Abstrak — edit di content/05-abstrak.typ
 #halaman-abstrak(data)
 
-// 11. Kata Pengantar — edit di content/05-kata-pengantar.typ
+// Kata Pengantar — edit di content/06-kata-pengantar.typ
 #kata-pengantar(data)
 
-// 12. Daftar Isi
+// Daftar Isi
 #pagebreak()
-#include "content/06-daftar-isi.typ"
+#include "content/07-daftar-isi.typ"
 
-// 13. Daftar Gambar
+// Daftar Gambar
 #pagebreak()
-#include "content/07-daftar-gambar.typ"
+#include "content/08-daftar-gambar.typ"
 
-// 14. Daftar Tabel
+// Daftar Tabel
 #pagebreak()
-#include "content/08-daftar-tabel.typ"
+#include "content/09-daftar-tabel.typ"
 
-// 15. Daftar Kode Sumber
+// Daftar Kode Sumber
 #pagebreak()
-#include "content/09-daftar-kode.typ"
+#include "content/10-daftar-kode.typ"
 
-// 16. Daftar Singkatan — edit di content/10-daftar-singkatan.typ
+// Daftar Singkatan — edit di content/11-daftar-singkatan.typ
 #pagebreak()
-#include "content/10-daftar-singkatan.typ"
+#include "content/11-daftar-singkatan.typ"
 
-// 17. Daftar Simbol — edit di content/11-daftar-simbol.typ
+// Daftar Simbol — edit di content/12-daftar-simbol.typ
 #pagebreak()
-#include "content/11-daftar-simbol.typ"
+#include "content/12-daftar-simbol.typ"
 
 // ============================================================
 // MAIN MATTER — penomoran arab
 // ============================================================
-// 18. Bab-bab — edit di content/chapters/01-bab1.typ dst.
+// Bab-bab — edit di content/chapters/01-bab1.typ dst.
 #pagebreak()
 #set page(numbering: "1")
 #counter(page).update(1)
@@ -94,14 +100,13 @@
 #include "content/chapters/05-bab5.typ"
 #include "content/chapters/06-bab6.typ"
 
-// 19. Daftar Pustaka
+// Daftar Pustaka
 #pagebreak()
 #headz[DAFTAR PUSTAKA]
 #bibliography("daftar-pustaka.bib", title: none, style: "american-psychological-association")
 
-// 20. Lampiran — edit di content/chapters/07-lampiran.typ
-// (sudah di-include melalui template.with(appendices: ...) di atas)
+// Lampiran — sudah di-include melalui template.with(appendices: ...) di atas
 
-// 21. Biodata Penulis — edit di content/chapters/08-biodata-penulis.typ
+// Biodata Penulis — edit di content/chapters/08-biodata-penulis.typ
 #pagebreak()
 #include "content/chapters/08-biodata-penulis.typ"
