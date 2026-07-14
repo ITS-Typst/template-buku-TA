@@ -29,39 +29,51 @@
 // ============================================================
 // HALAMAN SAMPUL (tanpa nomor halaman)
 // ============================================================
-// 1. Cover luar (biru)
 #set page(numbering: none)
-#halaman-cover(data)
-#halaman-kosong()
 
-// 2. Halaman judul dalam ID + EN
-#pagebreak()
-#halaman-judul(data)
+// 1. Cover luar (biru) — ID saja
+#halaman-cover(data)
+#halaman-kosong(lang: "id")
+
+// 2. Halaman judul dalam (putih) — ID + EN
+#halaman-judul(data, lang: "id")
+#halaman-kosong(lang: "id")
+#halaman-judul(data, lang: "en")
+#halaman-kosong(lang: "en")
 
 // ============================================================
-// FRONT MATTER — penomoran romawi
+// FRONT MATTER — penomoran romawi, mulai i dari Lembar Pengesahan
 // ============================================================
 #set page(numbering: "i")
 #counter(page).update(1)
 
-// Lembar Pengesahan ID + EN
-#lembar-pengesahan(data)
+// Lembar Pengesahan — ID + EN
+#lembar-pengesahan(data, lang: "id")
+#halaman-kosong(lang: "id")
+#lembar-pengesahan(data, lang: "en")
+#halaman-kosong(lang: "en")
 
-// Pernyataan Orisinalitas ID + EN
-#pernyataan-orisinalitas(data)
+// Pernyataan Orisinalitas — ID + EN
+#pernyataan-orisinalitas(data, lang: "id")
+#halaman-kosong(lang: "id")
+#pernyataan-orisinalitas(data, lang: "en")
+#halaman-kosong(lang: "en")
 
-// Pernyataan Kode Etik Penggunaan AI Generatif
+// Pernyataan Kode Etik Penggunaan AI Generatif (bilingual, 1 halaman)
 #pernyataan-ai(data)
-#halaman-kosong()
+#halaman-kosong(lang: "id")
 
 // Abstrak — edit di content/05-abstrak.typ
-#halaman-abstrak(data)
+#halaman-abstrak(data, lang: "id")
+#halaman-kosong(lang: "id")
+#halaman-abstrak(data, lang: "en")
+#halaman-kosong(lang: "en")
 
 // Kata Pengantar — edit di content/06-kata-pengantar.typ
 #kata-pengantar(data)
+#halaman-kosong(lang: "id")
 
 // Daftar Isi
-#pagebreak()
 #include "content/07-daftar-isi.typ"
 
 // Daftar Gambar
@@ -87,12 +99,12 @@
 // ============================================================
 // MAIN MATTER — penomoran arab
 // ============================================================
-// Bab-bab — edit di content/chapters/01-bab1.typ dst.
 #pagebreak()
 #set page(numbering: "1")
 #counter(page).update(1)
 #counter(heading).update(0)
 
+// Bab-bab — edit di content/chapters/01-bab1.typ dst.
 #include "content/chapters/01-bab1.typ"
 #include "content/chapters/02-bab2.typ"
 #include "content/chapters/03-bab3.typ"
