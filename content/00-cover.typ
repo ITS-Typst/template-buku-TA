@@ -4,19 +4,19 @@
 
 #import "../template/lib.typ": *
 
-#let its-blue  = rgb(0, 103, 171)
+#let its-blue = rgb(0, 103, 171)
 #let its-white = white
 
 #let _logo-full() = image("../assets/brand/Logo-ITS-Biru.png", height: 2.7cm)
 
 #let halaman-cover(data) = {
-  let judul      = data.judul.id
-  let tipe       = "TUGAS AKHIR"
-  let lbl-pemb   = "Dosen Pembimbing"
+  let judul = data.judul.id
+  let tipe = "TUGAS AKHIR"
+  let lbl-pemb = "Dosen Pembimbing"
   let lbl-kopemb = "Dosen Ko-pembimbing"
-  let prodi      = data.institusi.prodi.id
-  let dept       = data.institusi.departemen.id
-  let fak        = data.institusi.fakultas.id
+  let prodi = data.institusi.prodi.id
+  let dept = data.institusi.departemen.id
+  let fak = data.institusi.fakultas.id
 
   set page(
     paper: "a4",
@@ -37,39 +37,40 @@
   )
 
   // Konten biru di bawah band
-  pad(left: 3cm, right: 3cm, top: 1.2cm, bottom: 2.5cm)[
+  pad(left: 3cm, right: 3cm, top: 0.6cm, bottom: 2cm)[
     #set text(fill: its-white, font: "Trebuchet MS")
-    #set par(first-line-indent: 0pt, justify: false)
+    #set par(first-line-indent: 0pt, justify: false, leading: 0.85em)
 
     // Kode MK
-    #text(size: 12pt)[#tipe – #data.kode-mk]
-    #v(1.8cm)
+    #text(size: 14pt, weight: "bold")[#tipe – #data.kode-mk]
+    #v(1cm)
 
     // Judul
-    #text(size: 16pt, weight: "bold")[#judul]
-    #v(1.8cm)
+    #par(justify: true)[#text(size: 18pt, weight: "bold")[#judul]]
+    #v(2cm)
 
     // Mahasiswa
-    #text(size: 12pt)[#data.mahasiswa.nama] \
-    #text(size: 12pt)[NRP #data.mahasiswa.nrp]
+    #text(size: 14pt, weight: "bold")[#data.mahasiswa.nama] \
+    #text(size: 14pt)[NRP #data.mahasiswa.nrp]
     #v(1cm)
 
     // Pembimbing
-    #text(size: 12pt)[#lbl-pemb] \
-    #text(size: 12pt, weight: "bold")[#data.pembimbing.nama] \
-    #text(size: 12pt)[NIP #data.pembimbing.nip]
+    #text(size: 14pt)[#lbl-pemb] \
+    #text(size: 14pt, weight: "bold")[#data.pembimbing.nama] \
+    #text(size: 14pt)[NIP #data.pembimbing.nip]
 
+    // Ko-pembimbing (opsional)
     #for kp in data.ko-pembimbing [
-      #v(0.5cm)
-      #text(size: 12pt)[#lbl-kopemb] \
-      #text(size: 12pt, weight: "bold")[#kp.nama] \
-      #text(size: 12pt)[NIP #kp.nip]
+      #v(1cm)
+      #text(size: 14pt)[#lbl-kopemb] \
+      #text(size: 14pt, weight: "bold")[#kp.nama] \
+      #text(size: 14pt)[NIP #kp.nip]
     ]
 
-    #v(1.5cm)
+    #v(1.8cm)
 
     // Institusi
-    #text(size: 12pt, weight: "bold")[#prodi] \
+    #text(size: 14pt, weight: "bold")[#prodi] \
     #text(size: 12pt)[#dept] \
     #text(size: 12pt)[#fak] \
     #text(size: 12pt)[#data.institusi.nama] \

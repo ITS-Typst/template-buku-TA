@@ -10,18 +10,16 @@ judul:
   en: "Design of an Author Recommendation System with Query Privacy Protection Using Homomorphic Inference"
 
 mahasiswa:
-  nama: "Ricardo Supriyanto"
-  nrp: "5025221218"
+  nama: "Isi Nama Anda No Game Well Do Good"
+  nrp: "5025123456"
 
 pembimbing:
-  nama: "Moch. Nafkhan Alzamzami, S.T., M.T."
-  nip: "199911222024061001"
+  nama: "Dosen Pembimbing Satu Anda, S.Kom., M.Sc., Ph.D."
+  nip: "00012345678999"
 
 ko-pembimbing:
-  - nama: "Ilham Gurat Adillion, S.Kom., M.Eng."
-    nip: "1995202411009"
-  - nama: "Prof. Ir. Ary Mazharuddin Shiddiqi, S.Kom., M.Comp.Sc., Ph.D."
-    nip: "198106202005011003"
+  - nama: "Ir. Dosen Pembimbing Dua Anda, M.Eng., Ph.D."
+    nip: "0000001234599"
 
 penguji:
   - nama: "<Nama dan gelar penguji>"
