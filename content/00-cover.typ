@@ -37,7 +37,7 @@
   )
 
   // Konten biru di bawah band
-  pad(left: 3cm, right: 3cm, top: 0.6cm, bottom: 2cm)[
+  pad(left: 3cm, right: 3cm, top: 0.6cm, bottom: 0cm)[
     #set text(fill: its-white, font: "Trebuchet MS")
     #set par(first-line-indent: 0pt, justify: false, leading: 0.85em)
 
@@ -50,7 +50,7 @@
     #v(2cm)
 
     // Mahasiswa
-    #text(size: 14pt, weight: "bold")[#data.mahasiswa.nama] \
+    #text(size: 14pt, weight: "bold")[#upper(data.mahasiswa.nama)] \
     #text(size: 14pt)[NRP #data.mahasiswa.nrp]
     #v(1cm)
 
