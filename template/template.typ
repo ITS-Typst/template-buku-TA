@@ -17,17 +17,16 @@
         else { align(left, pnum) }
       }
     },
-    // Satu tempat untuk teks "Halaman ini sengaja dikosongkan." — dua sumber:
-    // 1. halaman-kosong() eksplisit → marker <halaman-kosong>
-    // 2. pagebreak(to:"odd") otomatis sebelum bab/lampiran → halaman genap
-    //    yang halaman berikutnya adalah heading level-1 bernomor
+    // Teks "Halaman ini sengaja dikosongkan." di halaman genap sebelum bab bernomor.
+    // halaman-kosong() eksplisit sudah menaruh teks sendiri via v(1fr)+align.
+    // Foreground hanya perlu menangani blank page otomatis dari pagebreak(to:"odd")
+    // di show heading level-1.
     foreground: context {
       let cur = here().page()
-      let explicit = query(<halaman-kosong>).any(m => m.location().page() == cur)
       let before-bab = calc.even(cur) and query(heading.where(level: 1)).any(h =>
         h.numbering != none and h.location().page() == cur + 1
       )
-      if explicit or before-bab {
+      if before-bab {
         place(top + center, dy: 3cm,
           text(style: "italic")[Halaman ini sengaja dikosongkan.]
         )
