@@ -7,14 +7,14 @@ kode-mk: "EF234801"
 
 judul:
   id: "PENGEMBANGAN ANTARMUKA DAN PENGALAMAN PENGGUNA DALAM PERSIAPAN KARIR DIGITAL MELALUI APLIKASI “Aicareer” DENGAN PENDEKATAN DESIGN THINKING"
-  en: "Design of an Author Recommendation System with Query Privacy Protection Using Homomorphic Inference"
+  en: "DEVELOPMENT OF INTERFACE AND USER EXPERIENCE IN DIGITAL CAREER PREPARATION THROUGH THE “AICAREER” APPLICATION USING THE DESIGN THINKING APPROACH"
 
 mahasiswa:
   nama: "Isi Nama Anda No Game Well Do Good"
   nrp: "5025123456"
 
 pembimbing:
-  nama: "Dosen Pembimbing Satu Anda, S.Kom., M.Sc., Ph.D."
+  nama: "Dosen Pembimbing Satu Anda, S.Kom., M.Sc., Ph.D. S.Kom"
   nip: "00012345678999"
 
 ko-pembimbing:
@@ -46,5 +46,5 @@ institusi:
 
 tahun: "2026"
 bulan:
-  id: "Januari"
-  en: "January"
+  id: "Juli"
+  en: "July"
