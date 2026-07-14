@@ -27,8 +27,8 @@
 // Layout — tidak perlu diedit
 // ============================================================
 
+// halaman-kosong() dipasang eksplisit di main.typ setelah pemanggilan ini
 #let kata-pengantar(data) = {
   headz[KATA PENGANTAR]
   isi
-  halaman-kosong()
 }

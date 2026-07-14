@@ -7,7 +7,7 @@
 
 #let its-blue = rgb(0, 103, 171)
 
-#let _logo-lambang() = image("../assets/brand/Lambang-ITS-2.png", height: 2.7cm)
+#let _logo-lambang() = image("../assets/brand/Lambang-ITS-2.png", height: 2.5cm)
 
 #let _halaman-judul-single(data, lang: "id") = {
   let judul      = if lang == "id" { data.judul.id } else { data.judul.en }
@@ -27,61 +27,58 @@
     numbering: none,
   )
   set text(font: "Trebuchet MS")
-  set par(first-line-indent: 0pt, justify: false)
+  set par(first-line-indent: 0pt, justify: false, leading: 0.85em)
 
   // Blok atas: lambang ITS di kiri
-  block(width: 100%, height: 4cm)[
-    #pad(left: 3.5cm, top: 0.8cm)[
-      #_logo-lambang()
-    ]
-  ]
+  block(
+    width: 100%,
+    height: 3.6cm,
+    inset: (left: 2cm, right: 3cm, top: 1cm, bottom: 2cm),
+    _logo-lambang(),
+  )
 
   // Stripe biru horizontal
-  block(fill: its-blue, width: 100%, height: 0.9cm)
+  block(fill: its-blue, width: 100%, height: 0.85cm)
 
   // Konten di bawah stripe
-  pad(left: 4cm, right: 3cm, top: 3cm, bottom: 2.5cm)[
+  pad(left: 3cm, right: 3cm, top: 0.4cm, bottom: 0cm)[
 
     // Kode MK
-    #text(size: 12pt)[#tipe – #data.kode-mk]
-    #v(1.5cm)
+    #text(size: 14pt, weight: "bold")[#tipe – #data.kode-mk]
+    #v(1cm)
 
     // Judul — bold italic
-    #text(size: 14pt, weight: "bold", style: "italic")[#judul]
-    #v(1.5cm)
+    #par(justify: true)[#text(size: 18pt, weight: "bold")[#judul]]
+    #v(2cm)
 
     // Mahasiswa
-    #data.mahasiswa.nama \
-    NRP #data.mahasiswa.nrp
-    #v(0.8cm)
+    #text(size: 14pt, weight: "bold")[#upper(data.mahasiswa.nama)] \
+    #text(size: 14pt)[NRP #data.mahasiswa.nrp]
+    #v(1cm)
 
     // Pembimbing
-    #lbl-pemb \
-    #text(weight: "bold")[#data.pembimbing.nama] \
-    NIP #data.pembimbing.nip
+    #text(size: 14pt)[#lbl-pemb] \
+    #text(size: 14pt, weight: "bold")[#data.pembimbing.nama] \
+    #text(size: 14pt)[NIP #data.pembimbing.nip]
 
     #for kp in data.ko-pembimbing [
-      #v(0.4cm)
-      #lbl-kopemb \
-      #text(weight: "bold")[#kp.nama] \
-      NIP #kp.nip
+      #v(1cm)
+      #text(size: 14pt)[#lbl-kopemb] \
+      #text(size: 14pt, weight: "bold")[#kp.nama] \
+      #text(size: 14pt)[NIP #kp.nip]
     ]
 
-    #v(1.5cm)
+    #v(1.8cm)
 
     // Institusi
-    #text(weight: "bold")[#prodi] \
-    #dept \
-    #fak \
-    #data.institusi.nama \
-    #data.institusi.kota \
-    #data.tahun
+    #text(size: 14pt, weight: "bold")[#prodi] \
+    #text(size: 12pt)[#dept] \
+    #text(size: 12pt)[#fak] \
+    #text(size: 12pt)[#data.institusi.nama] \
+    #text(size: 12pt)[#data.institusi.kota] \
+    #text(size: 12pt)[#data.tahun]
   ]
 }
 
-#let halaman-judul(data) = {
-  _halaman-judul-single(data, lang: "id")
-  halaman-kosong()
-  pagebreak()
-  _halaman-judul-single(data, lang: "en")
-}
+// Dipanggil per bahasa dari main.typ; halaman-kosong() dipasang eksplisit di main.typ
+#let halaman-judul(data, lang: "id") = _halaman-judul-single(data, lang: lang)

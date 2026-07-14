@@ -70,9 +70,8 @@
   [*#kw-label:* #kw]
 }
 
-#let halaman-abstrak(data) = {
-  _render(data, "id", id, kata-kunci-id)
-  halaman-kosong()
-  _render(data, "en", en, kata-kunci-en)
-  halaman-kosong()
+// Dipanggil per bahasa dari main.typ; halaman-kosong() dipasang eksplisit di main.typ
+#let halaman-abstrak(data, lang: "id") = {
+  if lang == "id" { _render(data, "id", id, kata-kunci-id) }
+  else { _render(data, "en", en, kata-kunci-en) }
 }

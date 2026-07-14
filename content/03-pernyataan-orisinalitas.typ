@@ -80,9 +80,5 @@
   NIP. #data.ko-pembimbing.at(0).nip]
 }
 
-#let pernyataan-orisinalitas(data) = {
-  _orisinalitas(data, lang: "id")
-  halaman-kosong()
-  _orisinalitas(data, lang: "en")
-  halaman-kosong()
-}
+// Dipanggil per bahasa dari main.typ; halaman-kosong() dipasang eksplisit di main.typ
+#let pernyataan-orisinalitas(data, lang: "id") = _orisinalitas(data, lang: lang)

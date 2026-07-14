@@ -19,29 +19,35 @@
   let lbl-pemb  = if lang == "id" { "Pembimbing" } else { "Advisor" }
   let lbl-kopemb = if lang == "id" { "Ko-pembimbing" } else { "Co-advisor" }
 
-  headz[#judul-hal]
+  headz(size: 14pt)[#judul-hal]
+  v(0.8cm)
 
   set par(first-line-indent: 0pt)
 
   align(center)[
+    #set par(justify: false)
     #text(size: 12pt, weight: "bold")[#judul] \
-    #v(0.3cm)
-    #text(size: 14pt, weight: "bold")[#tipe] \
-    #v(0.5cm)
-    #kal1 \
-    #kal2 \
-    #prodi \
-    #dept \
-    #fak \
-    #data.institusi.nama \
-    #v(0.3cm)
-    #oleh #data.mahasiswa.nama \
-    NRP. #data.mahasiswa.nrp
+    #v(0.6cm)
+    #{
+      set par(leading: 1em)
+      [
+        #text(size: 12pt, weight: "bold")[#tipe] \
+        #kal1 \
+        #kal2 \
+        #prodi \
+        #dept \
+        #fak \
+        #data.institusi.nama \
+        #v(0.7cm)
+        #oleh #text(weight: "bold")[#upper(data.mahasiswa.nama)] \
+        NRP. #data.mahasiswa.nrp
+      ]
+    }
   ]
 
-  v(0.8cm)
-  text(weight: "bold")[#disetujui]
-  v(0.5cm)
+  v(0.9cm)
+  align(center, text(size: 12pt)[#disetujui])
+  v(0.7cm)
 
   let all-sv = (
     (data.pembimbing.nama, lbl-pemb),
@@ -49,31 +55,27 @@
     ..data.penguji.map(p => (p.nama, if lang == "id" { p.label.id } else { p.label.en })),
   )
 
-  for (i, (nama, jabatan)) in all-sv.enumerate() [
-    #grid(
-      columns: (0.6cm, 7cm, 1fr),
-      gutter: 0.3cm,
-      [#(i+1).],
-      [
-        #v(1.8cm)
-        #line(length: 100%)
-        #nama
-      ],
-      [#jabatan],
+  for (i, (nama, jabatan)) in all-sv.enumerate() {
+    grid(
+      columns: (auto, 1fr, 3.4cm),
+      align: (left, left, left),
+      gutter: 0.85em,
+      text(size: 13pt)[#(i+1).],
+      text(size: 13pt)[#nama],
+      text(size: 13pt)[#jabatan],
     )
-    #v(0.2cm)
-  ]
+    v(0.7cm)
+  }
 
-  v(0.5cm)
+  v(0.8cm)
   align(center)[
-    #upper(data.institusi.kota) \
-    #bulan, #data.tahun
+    #set par(justify: false, leading: 1em)
+    #text(weight: "bold")[
+      #upper(data.institusi.kota) \
+      #bulan, #data.tahun
+    ]
   ]
 }
 
-#let lembar-pengesahan(data) = {
-  _pengesahan(data, lang: "id")
-  halaman-kosong()
-  _pengesahan(data, lang: "en")
-  halaman-kosong()
-}
+// Dipanggil per bahasa dari main.typ; halaman-kosong() dipasang eksplisit di main.typ
+#let lembar-pengesahan(data, lang: "id") = _pengesahan(data, lang: lang)
