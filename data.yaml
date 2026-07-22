@@ -10,16 +10,16 @@ judul:
   en: "DEVELOPMENT OF INTERFACE AND USER EXPERIENCE IN DIGITAL CAREER PREPARATION THROUGH THE “AICAREER” APPLICATION USING THE DESIGN THINKING APPROACH"
 
 mahasiswa:
-  nama: "Isi Nama Anda No Game Well Do Good"
-  nrp: "5025123456"
+  nama: "Nama Lengkap Anda"
+  nrp: "5025XXXXXXX"
 
 pembimbing:
-  nama: "Dosen Pembimbing Satu Anda, S.Kom., M.Sc., Ph.D."
-  nip: "00012345678999"
+  nama: "Dosen Pembimbing Satu, S.Kom., M.Sc."
+  nip: "0001234567899"
 
 ko-pembimbing:
-  - nama: "Ir. Dosen Pembimbing Dua Anda, M.Eng., Ph.D."
-    nip: "0000001234599"
+  - nama: "Ir. Dosen Pembimbing Dua, M.Eng., Ph.D."
+    nip: "00000013456"
 
 penguji:
   - nama: "<Nama dan gelar penguji>"
@@ -48,3 +48,4 @@ tahun: "2026"
 bulan:
   id: "Juli"
   en: "July"
+tanggal: "22"

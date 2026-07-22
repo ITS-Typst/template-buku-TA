@@ -24,11 +24,12 @@
   let bulan      = if lang == "id" { data.bulan.id } else { data.bulan.en }
 
   headz[#judul-hal]
+  v(1cm)
 
   set par(first-line-indent: 0pt)
 
   [#pembuka]
-  v(0.3cm)
+  v(0.5cm)
 
   if lang == "id" {
     entry-fields((
@@ -36,48 +37,49 @@
       ([Program Studi], [S-1 Teknik Informatika]),
       ([Dosen Pembimbing / NIP], [#data.pembimbing.nama / #data.pembimbing.nip]),
       ..data.ko-pembimbing.map(k => ([Dosen Ko-pembimbing / NIP], [#k.nama / #k.nip])),
-    ))
+    ), col-widths: (5.55cm, 0.5cm, 1fr), row-gutter: 0.4cm)
   } else {
     entry-fields((
       ([Student Name / Student ID], [#data.mahasiswa.nama / #data.mahasiswa.nrp]),
       ([Study Program], [Bachelor of Informatics]),
       ([Advisor / Employee ID], [#data.pembimbing.nama / #data.pembimbing.nip]),
       ..data.ko-pembimbing.map(k => ([Co-advisor / Employee ID], [#k.nama / #k.nip])),
-    ))
+    ), col-widths: (5.55cm, 0.5cm, 1fr), row-gutter: 0.4cm)
   }
 
   v(0.5cm)
-  isi
-  v(0.3cm)
-  sanksi
 
-  v(1cm)
+  isi
+  v(0cm)
+
+  sanksi
+  v(2cm)
+  
   grid(
     columns: (1fr, 1fr),
     gutter: 1cm,
-    [
+    align(center)[
       #lbl-mengetahui \
-      #text(weight: "bold")[#lbl-pemb]
-      #v(1.8cm)
-      #line(length: 100%)
+      #lbl-pemb
+      #v(1.5cm)
       #data.pembimbing.nama \
       NIP. #data.pembimbing.nip
+      #if data.ko-pembimbing.len() > 0 [
+        #v(0.6cm)
+        #lbl-kopemb
+        #v(1.5cm)
+        #data.ko-pembimbing.at(0).nama \
+        NIP. #data.ko-pembimbing.at(0).nip
+      ]
     ],
-    [
-      #data.institusi.kota, #underline[#h(3.5cm)] \
-      #text(weight: "bold")[#lbl-mhs]
-      #v(1.8cm)
-      #line(length: 100%)
+    align(center)[
+      #data.institusi.kota, #data.tanggal #bulan #data.tahun \
+      #lbl-mhs
+      #v(1.5cm)
       #data.mahasiswa.nama \
       NRP. #data.mahasiswa.nrp
     ],
   )
-  v(0.5cm)
-  text(weight: "bold")[#lbl-kopemb]
-  v(1.8cm)
-  line(length: 50%)
-  [#data.ko-pembimbing.at(0).nama \
-  NIP. #data.ko-pembimbing.at(0).nip]
 }
 
 // Dipanggil per bahasa dari main.typ; halaman-kosong() dipasang eksplisit di main.typ
