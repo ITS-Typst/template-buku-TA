@@ -7,7 +7,7 @@
 
 #let its-blue = rgb(0, 103, 171)
 
-#let _logo-lambang() = image("../assets/brand/Lambang-ITS-2.png", height: 2.5cm)
+#let _logo-lambang() = image("../assets/brand/Lambang-ITS-2.png", height: 2.65cm)
 
 #let _halaman-judul-single(data, lang: "id") = {
   let judul      = if lang == "id" { data.judul.id } else { data.judul.en }
@@ -32,7 +32,7 @@
   // Blok atas: lambang ITS di kiri
   block(
     width: 100%,
-    height: 3.6cm,
+    height: 4cm,
     inset: (left: 2cm, right: 3cm, top: 1cm, bottom: 2cm),
     _logo-lambang(),
   )
