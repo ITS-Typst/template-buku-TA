@@ -51,8 +51,8 @@
   )
 
   // List & enum
-  set enum(indent: 1.25cm, body-indent: 0.5em)
-  set list(indent: 1.25cm, body-indent: 0.5em)
+  set enum(indent: 0.8cm, body-indent: 0.6em)
+  set list(indent: 1.25cm, body-indent: 0.6em)
 
   // Figure numbering: Gambar 1.1 per bab
   set figure(
