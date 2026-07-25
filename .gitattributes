@@ -1,0 +1,21 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Typst source files
+*.typ text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.md text eol=lf
+*.bib text eol=lf
+
+# Binary files — never touch line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg binary
+*.pdf binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
