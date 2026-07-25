@@ -22,9 +22,7 @@
 )
 
 // Wrap semua konten dalam template
-#show: template.with(appendices: {
-  include "content/chapters/07-lampiran.typ"
-})
+#show: template
 
 // ============================================================
 // HALAMAN SAMPUL (tanpa nomor halaman)
@@ -117,8 +115,10 @@
 #headz[DAFTAR PUSTAKA]
 #bibliography("daftar-pustaka.bib", title: none, style: "american-psychological-association")
 
-// Lampiran — sudah di-include melalui template.with(appendices: ...) di atas
-
-// Biodata Penulis — edit di content/chapters/08-biodata-penulis.typ
+// Lampiran — edit di content/13-lampiran.typ
 #pagebreak()
-#include "content/chapters/08-biodata-penulis.typ"
+#include "content/13-lampiran.typ"
+
+// Biodata Penulis — edit di content/14-biodata-penulis.typ
+#pagebreak()
+#include "content/14-biodata-penulis.typ"

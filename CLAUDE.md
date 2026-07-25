@@ -14,8 +14,9 @@ Entry point: `main.typ`. Compile: `typst compile main.typ` atau `typst watch mai
 | `data.yaml` | Semua metadata: nama, NRP, judul, pembimbing, dll |
 | `content/abstrak.typ` | Abstrak Indonesia + Inggris |
 | `content/kata-pengantar.typ` | Kata pengantar |
-| `chapters/bab1.typ` – `bab6.typ` | Isi per bab |
-| `chapters/lampiran.typ` | Lampiran |
+| `content/13-lampiran.typ` | Lampiran (bagian akhir, bukan bab) |
+| `content/14-biodata-penulis.typ` | Biodata penulis (bagian akhir, bukan bab) |
+| `content/chapters/bab1.typ` – `bab6.typ` | Isi per bab |
 | `content/figures/` | Gambar-gambar (PNG/JPG/SVG) |
 
 ### Infrastructure (jangan disentuh)

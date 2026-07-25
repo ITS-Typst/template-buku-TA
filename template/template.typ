@@ -4,7 +4,7 @@
 
 #import "lib.typ": *
 
-#let template(appendices: none, body) = {
+#let template(body) = {
   // Page setup
   set page(
     paper: "a4",
@@ -72,7 +72,11 @@
   set table(stroke: 0.5pt, inset: 6pt)
 
   // Heading setup + figure counter reset per bab
-  set heading(numbering: "1.1.1.")
+  set heading(numbering: (..nums) => {
+    let n = nums.pos()
+    if n.len() == 1 { "BAB " + str(n.first()) }
+    else { numbering("1.1.1.", ..n) }
+  })
 
   show heading.where(level: 1): it => {
     // Reset counter gambar/tabel/kode setiap bab baru
@@ -135,48 +139,4 @@
 
   // Body
   body
-
-  // Lampiran (appendices)
-  if appendices != none {
-    pagebreak(weak: true)
-    counter(heading).update(0)
-
-    set heading(
-      supplement: [Lampiran],
-      numbering: (..nums) => {
-        let arr = nums.pos()
-        if arr.len() == 1 {
-          "LAMPIRAN " + numbering("A", arr.at(0)) + "."
-        } else {
-          numbering("A.1", ..arr.slice(0))
-        }
-      },
-    )
-
-    show heading.where(level: 1): it => {
-      // Lampiran bernomor: mulai di halaman ganjil (cetak bolak-balik).
-      // Teks blank page ditambahkan via foreground (sama seperti bab).
-      if it.numbering != none {
-        pagebreak(to: "odd")
-      } else {
-        pagebreak(weak: true)
-      }
-
-      v(0.5cm)
-      align(center)[
-        #block(above: 0pt, below: 0pt,
-          text(size: 14pt, weight: "bold")[
-            #if it.numbering != none {
-              counter(heading).display("A")
-              [. ]
-            }
-            #upper(it.body)
-          ]
-        )
-      ]
-      v(0.8cm)
-    }
-
-    appendices
-  }
 }

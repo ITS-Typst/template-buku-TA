@@ -2,11 +2,12 @@
 // WAJIB EDIT — Biodata penulis (foto 4×6, riwayat pendidikan, prestasi)
 // ============================================================
 
-= BIODATA PENULIS
+#import "../template/lib.typ": headz
+#headz[BIODATA PENULIS]
 
 // Foto penulis (4×6 cm), taruh di assets/foto-penulis.jpg
 // #figure(
-//   image("../../assets/foto-penulis.jpg", width: 3cm),
+//   image("../assets/foto-penulis.jpg", width: 3cm),
 // )
 
 *Nama lengkap* penulis adalah *Nama Lengkap*. Penulis lahir di Kota, pada tanggal DD Bulan YYYY.
