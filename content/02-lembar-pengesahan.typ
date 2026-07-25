@@ -19,7 +19,7 @@
   let lbl-pemb  = if lang == "id" { "Pembimbing" } else { "Advisor" }
   let lbl-kopemb = if lang == "id" { "Ko-pembimbing" } else { "Co-advisor" }
 
-  headz(size: 14pt)[#judul-hal]
+  headz[#judul-hal]
   v(0.8cm)
 
   set par(first-line-indent: 0pt)
