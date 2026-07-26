@@ -17,21 +17,6 @@
         else { align(left, pnum) }
       }
     },
-    // Teks "Halaman ini sengaja dikosongkan." di halaman genap sebelum bab bernomor.
-    // halaman-kosong() eksplisit sudah menaruh teks sendiri via v(1fr)+align.
-    // Foreground hanya perlu menangani blank page otomatis dari pagebreak(to:"odd")
-    // di show heading level-1.
-    foreground: context {
-      let cur = here().page()
-      let before-bab = calc.even(cur) and query(heading.where(level: 1)).any(h =>
-        h.numbering != none and h.location().page() == cur + 1
-      )
-      if before-bab {
-        place(top + center, dy: 3cm,
-          text(style: "italic")[Halaman ini sengaja dikosongkan.]
-        )
-      }
-    },
   )
 
   // Typography
@@ -46,7 +31,7 @@
     justify: true,
     leading: 0.65em,
     spacing: 1.5em,
-    first-line-indent: 1.25cm,
+    // first-line-indent: 1.25cm,
     linebreaks: "optimized",
   )
 
@@ -85,13 +70,7 @@
     counter(figure.where(kind: "kode")).update(0)
 
     // Bab bernomor: mulai di halaman ganjil (cetak bolak-balik).
-    // pagebreak(to:"odd") stabil (tidak memicu convergence loop).
-    // Teks blank page ditambahkan via foreground di set page di atas.
-    if it.numbering != none {
-      pagebreak(to: "odd")
-    } else {
-      pagebreak(weak: true)
-    }
+    pagebreak(weak: true)
 
     align(center)[
       #block(above: 0pt, below: 0pt,
