@@ -6,43 +6,50 @@
 
 == Latar Belakang
 
-// Tulis latar belakang di sini.
-// Jelaskan konteks dan motivasi penelitian.
+Indonesia memiliki infrastruktur pendidikan tinggi yang sangat masif sebagai modal dalam pembangunan sumber daya manusia. Sebagaimana ditegaskan oleh Abdillah (2024), pendidikan tinggi tidak hanya memegang peran penting untuk mencerdaskan kehidupan bangsa, tetapi juga meningkatkan daya saing negara di kancah global. Berdasarkan laporan Pangkalan Data Pendidikan Tinggi (PDDikti) Kementerian Pendidikan Tinggi, Sains, dan Teknologi tahun 2024, tercatat bahwa terdapat 4.416 perguruan tinggi di Indonesia yang didominasi oleh 2.069 sekolah tinggi. Pertumbuhan institusi ini berkorelasi lurus dengan peningkatan jumlah mahasiswa, yaitu sebesar 67,2% dalam satu dekade terakhir (Solehuddin, 2023). Idealnya, peningkatan produktivitas perguruan tinggi dalam mencetak lulusan seharusnya berbanding lurus dengan ketersediaan talenta terampil yang mampu menjawab kebutuhan industri yang terus berkembang.
 
-Lorem ipsum — ganti dengan latar belakang penelitian Anda.
+Lorem Ipsum Dolor Sit Amet.
 
 == Rumusan Masalah
 
-Berdasarkan latar belakang yang telah diuraikan, rumusan masalah pada penelitian ini adalah:
+Dalam pengembangan antarmuka dan pengalaman pengguna pada aplikasi Aicareer untuk mendukung persiapan karir digital, terdapat berbagai tantangan yang perlu diatasi, khususnya dalam menciptakan interaksi yang intuitif serta pengalaman penggunaan yang efektif dalam membantu pengguna mempersiapkan diri menghadapi proses seleksi industri. Berdasarkan latar belakang tersebut, rumusan masalah dalam penelitian ini dirumuskan sebagai berikut:
 
-+ Bagaimana merancang sistem yang mampu melakukan proses rekomendasi author tanpa mengekspos isi query pengguna ke server?
-+ Bagaimana mengintegrasikan skema Fully Homomorphic Encryption (FHE) ke dalam pipeline inferensi rekomendasi author?
-+ Bagaimana mengukur efisiensi dan akurasi sistem rekomendasi author berbasis homomorphic inference?
++ Bagaimana proses pemahaman konteks permasalahan terkait kebutuhan, tantangan, dan hambatan yang dialami talenta digital dalam persiapan karir?
++ Bagaimana pendefinisian masalah utama berdasarkan data kebutuhan pengguna untuk menentukan fokus pengembangan aplikasi Aicareer?
++ Lorem Ipsum Dolor Sit Amet.
+
 
 == Batasan Masalah
 
-Untuk membatasi ruang lingkup penelitian, ditetapkan batasan-batasan sebagai berikut:
+Penelitian ini memiliki beberapa batasan untuk menjaga fokus pembahasan pada pengembangan antarmuka dan pengalaman pengguna dalam mendukung persiapan karir digital melalui aplikasi Aicareer. Batasan tersebut ditetapkan agar penelitian tetap terarah serta menyesuaikan dengan keterbatasan sumber daya yang tersedia. Adapun batasan masalah dalam penelitian ini adalah sebagai berikut:
 
-+ ...
-+ ...
++ Penelitian ini berfokus pada perancangan antarmuka dan pengalaman pengguna dalam mendukung persiapan karir digital.
++ Sistem Aicareer merupakan hasil pengembangan berkelanjutan yang dimulai sejak kompetisi GEMASTIK XVIII dan dilanjutkan melalui program pendanaan ITS Youth Technopreneur (IYT), sebelum disusun sebagai bagian dari Tugas Akhir ini.
++ Lorem Ipsum Dolor Sit Amet.
 
 == Tujuan
 
-Tujuan dari penelitian ini adalah:
+Penelitian ini bertujuan untuk mengembangkan antarmuka dan pengalaman pengguna pada aplikasi Aicareer guna mendukung persiapan karir digital. Adapun tujuan spesifik dari penelitian ini adalah sebagai berikut:
 
-+ ...
-+ ...
++ Memahami konteks permasalahan terkait kebutuhan, tantangan, dan hambatan yang dialami talenta digital dalam persiapan karir.
++ Mendefinisikan masalah utama berdasarkan data kebutuhan pengguna untuk menentukan fokus pengembangan aplikasi Aicareer.
++ Lorem Ipsum Dolor Sit Amet.
 
 == Manfaat
 
+Penelitian ini diharapkan dapat memberikan berbagai manfaat, baik secara teoritis maupun praktis, dalam pengembangan antarmuka dan pengalaman pengguna aplikasi Aicareer. Adapun manfaat penelitian ini adalah sebagai berikut:
+
 === Manfaat Teoritis
 
-...
++ Menjadi referensi akademis mengenai penerapan metode _Design Thinking_ dalam pengembangan platform persiapan karir digital.
++ Lorem Ipsum Dolor Sit Amet.
 
 === Manfaat Praktis
 
-...
++ Menambah literatur terkait perancangan antarmuka dan pengalaman pengguna yang efektif bagi segmen talenta digital dan _fresh graduate_.
++ Lorem Ipsum Dolor Sit Amet.
 
 === Manfaat Sosial
 
-...
++ Berkontribusi dalam upaya menurunkan tingkat pengangguran terbuka melalui peningkatan kesiapan karir talenta digital.
++ Lorem Ipsum Dolor Sit Amet.
