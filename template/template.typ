@@ -48,12 +48,12 @@
     },
     gap: 0.65em,
   )
-  show figure.caption: set text(size: 11pt)
+  show figure.caption: set text(size: 9pt, style: "italic")
   show figure.where(kind: table): set figure.caption(position: top)
 
   // Table styling
   show table: set text(size: 11pt)
-  show table: set par(justify: false, first-line-indent: 0pt)
+  show table: set par(justify: true, first-line-indent: 0pt)
   set table(stroke: 0.5pt, inset: 6pt)
 
   // Heading setup + figure counter reset per bab
