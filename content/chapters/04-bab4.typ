@@ -1,46 +1,41 @@
 // ============================================================
-// WAJIB EDIT — BAB 4: Perancangan dan Implementasi
+// WAJIB EDIT — BAB 4: Hasil dan Pembahasan
 // ============================================================
 
-= PERANCANGAN DAN IMPLEMENTASI
+= HASIL DAN PEMBAHASAN
 
-== Perancangan Sistem
+== Antarmuka Pengguna Iterasi Pertama (_Functionality_)
 
-// Tulis perancangan sistem secara detail di sini.
+Pada tahap ini, pengembangan aplikasi Aicareer dilakukan menggunakan pendekatan _Design Thinking_, dengan fokus utama pada pengujian fungsionalitas sistem serta kesesuaian fitur terhadap kebutuhan pengguna. Selain itu, beberapa solusi yang telah dirancang pada tahap awal disesuaikan dan disempurnakan kembali berdasarkan hasil riset lanjutan serta ruang lingkup penelitian tugas akhir ini.
 
-=== Perancangan Database / Struktur Data
+=== _Empathize_
 
-// ...
+Pada tahap _Empathize_, penelitian dilakukan untuk memperoleh pemahaman mendalam mengenai kebutuhan dan permasalahan yang dialami pengguna agar aplikasi Aicareer dapat memberikan solusi yang sesuai dengan kebutuhan pengguna. Lorem Ipsum Dolor Sit Amet.
 
-=== Perancangan Antarmuka (jika ada)
+=== Lorem Ipsum Dolor Sit Amet
 
-// ...
+Lorem Ipsum Dolor Sit Amet.
 
-== Implementasi
+=== Hasil Penelitian
 
-=== Implementasi Pembentukan Representasi Author
+Lorem Ipsum Dolor Sit Amet.
 
-// Contoh kode sumber — hapus komentar untuk mengaktifkan:
-// #kode-sumber(
-//   caption: "Implementasi K-Means untuk Multi-Centroid Author",
-//   ```python
-//   from sklearn.cluster import KMeans
-//
-//   def build_author_centroids(embeddings, k=5):
-//       kmeans = KMeans(n_clusters=k, random_state=42)
-//       kmeans.fit(embeddings)
-//       return kmeans.cluster_centers_
-//   ```,
-// )
+=== Hasil Penelitian A
 
-=== Implementasi Enkripsi Query dengan FHE
+Lorem Ipsum Dolor Sit Amet.
 
-// ...
+=== Hasil Penelitian B
 
-=== Implementasi Homomorphic Similarity Computation
+Lorem Ipsum Dolor Sit Amet.
 
-// ...
+== Pembahasan
 
-=== Implementasi Dekripsi dan Ranking
+Lorem Ipsum Dolor Sit Amet.
 
-// ...
+=== Pembahasan A
+
+Lorem Ipsum Dolor Sit Amet.
+
+=== Pembahasan B
+
+Lorem Ipsum Dolor Sit Amet.

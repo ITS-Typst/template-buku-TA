@@ -2,19 +2,12 @@
 // OPSIONAL EDIT — BAB 6: Hapus jika tidak digunakan
 // ============================================================
 
-= PENUTUP
+= OPSIONAL BAB
 
-== Kesimpulan
+== Penjelasan Singkat
 
-Berdasarkan hasil penelitian yang telah dilakukan, dapat disimpulkan sebagai berikut:
+Hapus Bab Ini jika tidak digunakan. Bab ini bersifat opsional, sehingga dapat dihapus jika tidak diperlukan. Jika ingin menambahkan bab lain, silakan buat file baru di folder `content/chapters/` dengan format penamaan `06-bab6.typ`, `07-bab7.typ`, dst., lalu tambahkan `\#include "content/chapters/06-bab6.typ"` di `main.typ` setelah `\#include "content/chapters/05-bab5.typ"`.
 
-+ ...
-+ ...
-+ ...
+== Lorem Ipsum Dolor Sit Amet
 
-== Saran
-
-Beberapa saran untuk pengembangan lebih lanjut:
-
-+ ...
-+ ...
+Lorem Ipsum Dolor Sit Amet.

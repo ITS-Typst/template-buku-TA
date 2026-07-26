@@ -111,19 +111,22 @@
 #halaman-kosong(lang: "id")
 
 #include "content/chapters/03-bab3.typ"
+
 #include "content/chapters/04-bab4.typ"
+#halaman-kosong(lang: "id")
+
 #include "content/chapters/05-bab5.typ"
-#include "content/chapters/06-bab6.typ"
+#halaman-kosong(lang: "id")
+
+// #include "content/chapters/06-bab6.typ"
 
 // Daftar Pustaka
-#pagebreak()
-#headz[DAFTAR PUSTAKA]
-#bibliography("daftar-pustaka.bib", title: none, style: "american-psychological-association")
+#include "content/13-daftar-pustaka.typ"
+#halaman-kosong(lang: "id")
 
-// Lampiran — edit di content/13-lampiran.typ
-#pagebreak()
-#include "content/13-lampiran.typ"
+// Lampiran
+#include "content/14-lampiran.typ"
+#halaman-kosong(lang: "id")
 
-// Biodata Penulis — edit di content/14-biodata-penulis.typ
-#pagebreak()
-#include "content/14-biodata-penulis.typ"
+// Biodata Penulis
+#include "content/15-biodata-penulis.typ"

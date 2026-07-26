@@ -18,7 +18,7 @@ Penelitian mengenai pengembangan antarmuka dan pengalaman pengguna dengan pendek
     fill: (_, row) => if row == 0 { rgb("#D9D9D9") } else { none },
     [*No*], [*Judul*], [*Hasil*], [*Metode*], [*Keterbatasan*],
     [1],
-    [Metode Design Thinking Untuk Perancangan UI/UX Pada Aplikasi Konsultasi Karir (Aji et al., 2023)],
+    [Metode Design Thinking Untuk Perancangan UI/UX Pada Aplikasi Konsultasi Karir @aji2023metode],
     [Redesign antarmuka aplikasi KonsultasiKarir yang diuji pada 20 pengguna menggunakan SUS, memperoleh skor rata-rata 90,1.],
     [_Design Thinking_],
     [Luaran penelitian terbatas pada purwarupa desain menggunakan Figma; belum menyentuh validasi fungsionalitas sistem secara langsung .],
@@ -38,12 +38,12 @@ Subbab ini membahas tinjauan pustaka sebagai landasan teoritis penelitian. Pemba
 
 === _Design Thinking_
 
-_Design Thinking_ merupakan sebuah pendekatan penyelesaian masalah yang berpusat pada manusia. Pendekatan ini tidak hanya terbatas pada penciptaan benda fisik, tetapi juga mencakup aspek konseptual dan sistemik. Menurut Wolniak (2023), proses Design Thinking didasari oleh empat aturan utama yang menjadi landasan pola pikir inovasi, yaitu:
+_Design Thinking_ merupakan sebuah pendekatan penyelesaian masalah yang berpusat pada manusia. Pendekatan ini tidak hanya terbatas pada penciptaan benda fisik, tetapi juga mencakup aspek konseptual dan sistemik. Menurut @wolniak2023design, proses Design Thinking didasari oleh empat aturan utama yang menjadi landasan pola pikir inovasi, yaitu:
 
 + _The Human Rule_ menjelaskan bahwa semua aktivitas desain pada dasarnya bersifat sosial. Aturan ini menekankan bahwa inovasi harus didasarkan pada kebutuhan manusia atau pengguna sebagai aset paling berharga dalam proses desain.
 + Lorem Ipsum Dolor Sit Amet.
 
-Dalam perkembangannya, terdapat variasi model _Design Thinking_ yang dikemukakan oleh berbagai institusi. Gibbons (2016) mengusulkan enam fase yang mencakup tahap _Implement_, sementara Interaction Design Foundation (2025) menggunakan lima fase inti yang lebih berfokus pada siklus iteratif desain sebelum implementasi. Penelitian ini mengadopsi model lima fase dari Interaction Design Foundation (2025) sebagai kerangka kerja utama, sebagaimana ditunjukkan pada @gambar-design-thinking-process.
+Dalam perkembangannya, terdapat variasi model _Design Thinking_ yang dikemukakan oleh berbagai institusi. @gibbons2016design mengusulkan enam fase yang mencakup tahap _Implement_, sementara @idf2025design menggunakan lima fase inti yang lebih berfokus pada siklus iteratif desain sebelum implementasi. Penelitian ini mengadopsi model lima fase dari @idf2025design sebagai kerangka kerja utama, sebagaimana ditunjukkan pada @gambar-design-thinking-process.
 
 #gambar(
   "/assets/figures/design-thinking-process.jpg",
@@ -55,13 +55,13 @@ Lorem Ipsum Dolor Sit Amet.
 
 === Karir Digital
 
-Perkembangan teknologi telah memicu pergeseran fundamental dari sistem tradisional menuju digital, yang secara langsung mendorong terciptanya berbagai lapangan kerja baru. Transformasi ini diperkirakan akan mengubah 44% keterampilan pekerja dalam lima tahun ke depan. Profesi seperti _AI and Machine Learning Specialists_, _Sustainability Specialists_, dan _Business Intelligence Analysts_ masuk dalam daftar pekerjaan yang berkembang paling pesat (World Economic Forum, 2023).
+Perkembangan teknologi telah memicu pergeseran fundamental dari sistem tradisional menuju digital, yang secara langsung mendorong terciptanya berbagai lapangan kerja baru. Transformasi ini diperkirakan akan mengubah 44% keterampilan pekerja dalam lima tahun ke depan. Profesi seperti _AI and Machine Learning Specialists_, _Sustainability Specialists_, dan _Business Intelligence Analysts_ masuk dalam daftar pekerjaan yang berkembang paling pesat @wef2023jobs.
 
 Lorem Ipsum Dolor Sit Amet.
 
 === Antarmuka Pengguna
 
-Antarmuka pengguna atau _User Interface_ (UI) merupakan komponen fundamental dalam sistem interaktif yang berperan sebagai penghubung antara pengguna dan sistem. Antarmuka mencakup seluruh elemen yang dapat ditangkap oleh indra manusia serta memungkinkan interaksi secara langsung. Dalam konteks sistem digital, antarmuka pengguna merepresentasikan bagaimana desain grafis dan struktur visual diatur untuk memfasilitasi interaksi pengguna dengan aplikasi atau situs web. Seluruh elemen yang ditampilkan kepada pengguna, seperti teks, ikon, gambar, tombol, serta sistem navigasi yang dapat dioperasikan, merupakan bagian dari antarmuka pengguna (Faridha et al., 2024).
+Antarmuka pengguna atau _User Interface_ (UI) merupakan komponen fundamental dalam sistem interaktif yang berperan sebagai penghubung antara pengguna dan sistem. Antarmuka mencakup seluruh elemen yang dapat ditangkap oleh indra manusia serta memungkinkan interaksi secara langsung. Dalam konteks sistem digital, antarmuka pengguna merepresentasikan bagaimana desain grafis dan struktur visual diatur untuk memfasilitasi interaksi pengguna dengan aplikasi atau situs web. Seluruh elemen yang ditampilkan kepada pengguna, seperti teks, ikon, gambar, tombol, serta sistem navigasi yang dapat dioperasikan, merupakan bagian dari antarmuka pengguna @faridha2024metode.
 
 Lorem Ipsum Dolor Sit Amet.
 
