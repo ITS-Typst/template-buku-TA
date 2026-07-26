@@ -29,7 +29,7 @@
 // ============================================================
 #set page(numbering: none)
 
-// 1. Cover luar (biru) 
+// 1. Cover luar (biru)
 #halaman-cover(data)
 #halaman-kosong(lang: "id")
 
@@ -106,7 +106,10 @@
 
 // Bab-bab — edit di content/chapters/01-bab1.typ dst.
 #include "content/chapters/01-bab1.typ"
+
 #include "content/chapters/02-bab2.typ"
+#halaman-kosong(lang: "id")
+
 #include "content/chapters/03-bab3.typ"
 #include "content/chapters/04-bab4.typ"
 #include "content/chapters/05-bab5.typ"
