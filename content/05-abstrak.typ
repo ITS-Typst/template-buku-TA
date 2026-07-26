@@ -7,7 +7,7 @@
 // ABSTRAK BAHASA INDONESIA — EDIT DI SINI
 // 200–400 kata, tanpa sitasi, tanpa singkatan yg belum didefin.
 #let id = [
-  Ketidaksiapan karir talenta digital, khususnya mahasiswa tingkat akhir dan _fresh graduate_, masih menjadi salah satu tantangan yang berkontribusi terhadap tingginya angka pengangguran terdidik di Indonesia. Permasalahan ini juga relevan dengan upaya pencapaian _Sustainable Development Goals_ (SDGs) ke-8 serta visi Asta Cita poin 3 dan 4 yang menekankan peningkatan kualitas sumber daya manusia. Permasalahan ini muncul akibat tersebarnya sumber informasi persiapan karir, mulai dari eksplorasi jalur karir, penyusunan dokumen lamaran, hingga persiapan wawancara, yang belum terintegrasi dalam satu platform yang solutif. ......
+  Ketidaksiapan karir talenta digital, khususnya mahasiswa tingkat akhir dan _fresh graduate_, masih menjadi salah satu tantangan yang berkontribusi terhadap tingginya angka pengangguran terdidik di Indonesia. Permasalahan ini juga relevan dengan upaya pencapaian _Sustainable Development Goals_ (SDGs) ke-8 serta visi Asta Cita poin 3 dan 4 yang menekankan peningkatan kualitas sumber daya manusia. Permasalahan ini muncul akibat tersebarnya sumber informasi persiapan karir, mulai dari eksplorasi jalur karir, penyusunan dokumen lamaran, hingga persiapan wawancara, yang belum terintegrasi dalam satu platform yang solutif.
 
   // Lanjutkan abstrak Bahasa Indonesia di sini...
 ]
@@ -19,7 +19,7 @@
 // ABSTRACT IN ENGLISH — EDIT HERE
 // 200–400 words.
 #let en = [
-  The lack of career readiness among digital talents, particularly final-year university students and fresh graduates, remains one of the challenges contributing to the high rate of educated unemployment in Indonesia. This issue is also aligned with the achievement of Sustainable Development Goal (SDG) 8 and Indonesia's Asta Cita agenda, specifically points 3 and 4, which emphasize the development of high-quality human resources. The problem arises from the fragmentation of career preparation resources, ranging from career exploration and application document preparation to interview readiness, which are not yet integrated into a single comprehensive platform. ......
+  The lack of career readiness among digital talents, particularly final-year university students and fresh graduates, remains one of the challenges contributing to the high rate of educated unemployment in Indonesia. This issue is also aligned with the achievement of Sustainable Development Goal (SDG) 8 and Indonesia's Asta Cita agenda, specifically points 3 and 4, which emphasize the development of high-quality human resources. The problem arises from the fragmentation of career preparation resources, ranging from career exploration and application document preparation to interview readiness, which are not yet integrated into a single comprehensive platform.
 
   // Continue abstract in English here...
 ]

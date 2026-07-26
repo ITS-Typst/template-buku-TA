@@ -93,7 +93,6 @@
       pagebreak(weak: true)
     }
 
-    v(0.5cm)
     align(center)[
       #block(above: 0pt, below: 0pt,
         text(size: 14pt, weight: "bold")[
@@ -108,8 +107,8 @@
   }
 
   show heading.where(level: 2): it => {
-    v(0.5em, weak: true)
-    block(above: 1em, below: 0.5em,
+    // v(0.5em, weak: true)
+    block(above: 1.2em, below: 0.6em,
       text(size: 13pt, weight: "bold")[
         #counter(heading).display("1.1") #h(0.4em) #it.body
       ]
@@ -117,8 +116,8 @@
   }
 
   show heading.where(level: 3): it => {
-    v(0.3em, weak: true)
-    block(above: 0.8em, below: 0.4em,
+    // v(0.3em, weak: true)
+    block(above: 1.2em, below: 0.6em,
       text(size: 12pt, weight: "bold")[
         #counter(heading).display("1.1.1") #h(0.4em) #it.body
       ]
@@ -126,8 +125,8 @@
   }
 
   show heading.where(level: 4): it => {
-    v(0.2em, weak: true)
-    block(above: 0.6em, below: 0.3em,
+    // v(0.2em, weak: true)
+    block(above: 1.2em, below: 0.6em,
       text(size: 12pt, weight: "regular")[
         #counter(heading).display("1.1.1.1") #h(0.4em) #it.body
       ]
