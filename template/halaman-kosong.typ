@@ -12,7 +12,7 @@
 // jatuh di halaman ganjil — cukup hapus pemanggilan ini.
 // ============================================================
 
-#let halaman-kosong(lang: "id") = {
+#let halaman-kosong(lang: "id", trailing: true) = {
   let teks = if lang == "id" {
     "Halaman ini sengaja dikosongkan."
   } else {
@@ -20,5 +20,5 @@
   }
   pagebreak()
   align(center)[#text(style: "italic")[#teks]]
-  pagebreak()
+  if trailing { pagebreak() }
 }

@@ -3,22 +3,40 @@
 // ============================================================
 
 #import "../template/lib.typ": headz
-#headz[BIODATA PENULIS]
 
-// Foto penulis (4×6 cm), taruh di assets/foto-penulis.jpg
-// #figure(
-//   image("../assets/foto-penulis.jpg", width: 3cm),
-// )
+// ISI BIODATA — EDIT DI SINI
+#let isi(data) = [
+  // Bagian 1: foto + teks yang sejajar dengan foto
+  // Isi teks di sini secukupnya agar setara tinggi foto (±6 cm).
+  // Teks yang terlalu panjang akan tetap di kolom kanan.
+  #grid(
+    columns: (4cm, 1fr),
+    column-gutter: 1.5em,
+    align: (top, top),
 
-*Nama lengkap* penulis adalah *Nama Lengkap*. Penulis lahir di Kota, pada tanggal DD Bulan YYYY.
+    image("../assets/figures/foto-penulis.png", width: 4cm, height: 6cm, fit: "cover"),
 
-Penulis menempuh pendidikan dasar di SD ..., pendidikan menengah pertama di SMP ..., dan pendidikan menengah atas di SMA .... Pada tahun YYYY, penulis diterima di Departemen Teknik Informatika, Fakultas Teknologi Elektro dan Informatika Cerdas (FTEIC), Institut Teknologi Sepuluh Nopember (ITS) Surabaya melalui jalur ....
+    // Teks sejajar foto
+    [
+      *#data.mahasiswa.nama* lahir di [Kota Kelahiran] dan merupakan mahasiswa #data.institusi.departemen.id, #data.institusi.fakultas.id (FTEIC), #data.institusi.nama angkatan [TAHUN] dengan NRP #data.mahasiswa.nrp.
 
-Selama menempuh pendidikan di ITS, penulis aktif dalam beberapa kegiatan, antara lain:
+      Selama masa perkuliahan, Penulis aktif dalam organisasi [Nama Himpunan/Organisasi], serta menjadi [Asisten Dosen/Asisten Laboratorium] di [Nama Laboratorium]. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+    ],
+  )
 
-// Contoh:
-// - Anggota Himpunan Mahasiswa Teknik Computer-Informatika (HMTC) ITS
-// - Asisten Laboratorium ...
-// - Juara ... pada kompetisi ...
+  // Bagian 2: teks lanjutan, lebar penuh di bawah foto
+  Selain aktif di bidang akademik, Penulis juga mengikuti berbagai kompetisi nasional dan berhasil meraih [Deskripsi Prestasi]. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.
 
-Penulis dapat dihubungi melalui surel: *email\@its.ac.id*
+  Penulis memiliki minat di bidang [Bidang Minat 1], [Bidang Minat 2], dan [Bidang Minat 3]. Informasi lebih lanjut mengenai portofolio dan karya Penulis dapat diakses melalui #link("https://example.com")[example.com].
+]
+
+// ============================================================
+// Layout — tidak perlu diedit
+// ============================================================
+
+#let biodata-penulis(data) = {
+  headz[BIODATA PENULIS]
+  v(1cm)
+  set par(first-line-indent: 0pt)
+  isi(data)
+}

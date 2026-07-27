@@ -11,6 +11,7 @@
 #import "content/04-pernyataan-ai.typ": pernyataan-ai
 #import "content/05-abstrak.typ": halaman-abstrak
 #import "content/06-kata-pengantar.typ": kata-pengantar
+#import "content/15-biodata-penulis.typ": biodata-penulis
 
 // Load metadata dari data.yaml
 #let data = yaml("data.yaml")
@@ -128,5 +129,6 @@
 #include "content/14-lampiran.typ"
 #halaman-kosong(lang: "id")
 
-// Biodata Penulis
-#include "content/15-biodata-penulis.typ"
+// Biodata Penulis — bagian terakhir, blank page tanpa trailing break
+#biodata-penulis(data)
+#halaman-kosong(lang: "id", trailing: false)
