@@ -83,17 +83,20 @@
 #include "content/09-daftar-tabel.typ"
 #halaman-kosong(lang: "id")
 
+// Daftar Kode Semu
+#include "content/10-daftar-kode-semu.typ"
+#halaman-kosong(lang: "id")
+
 // Daftar Kode Sumber
-#include "content/10-daftar-kode.typ"
+#include "content/11-daftar-kode-sumber.typ"
 #halaman-kosong(lang: "id")
 
 // Daftar Singkatan
-#include "content/11-daftar-singkatan.typ"
+#include "content/12-daftar-singkatan.typ"
 #halaman-kosong(lang: "id")
 
-
 // Daftar Simbol
-#include "content/12-daftar-simbol.typ"
+#include "content/13-daftar-simbol.typ"
 #halaman-kosong(lang: "id")
 
 // ============================================================

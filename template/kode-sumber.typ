@@ -7,7 +7,7 @@
 //   ```)
 #let kode-sumber(caption: "", body) = figure(
   kind: "kode",
-  supplement: [Kode],
+  supplement: [Kode Sumber],
   caption: caption,
   block(
     fill: luma(248),

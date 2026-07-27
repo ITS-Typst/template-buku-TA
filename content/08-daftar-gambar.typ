@@ -6,6 +6,7 @@
 #v(1cm)
 #show outline.entry: it => {
   set text(size: 12pt, weight: "regular")
+  set par(hanging-indent: 6.5em)
   v(0.6em, weak: true)
   it
 }

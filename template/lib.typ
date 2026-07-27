@@ -8,6 +8,7 @@
 #import "halaman-kosong.typ": *
 #import "gambar.typ": *
 #import "kode-sumber.typ": *
+#import "kode-semu.typ": *
 #import "allow-table-break.typ": *
 #import "toc-entry-fn.typ": *
 #import "timeline-table.typ": *
