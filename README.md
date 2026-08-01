@@ -1,4 +1,4 @@
-![Hero](assets/brand/readme-hero.png)
+![Hero](assets/brand/readme-hero.webp)
 
 <div align="center">
   <h1>Template Buku Tugas Akhir</h1>
