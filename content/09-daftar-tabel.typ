@@ -1,6 +1,7 @@
 // ============================================================
 // AUTO — Daftar tabel, dibangun otomatis dari figure tabel
 // ============================================================
+
 #import "../template/lib.typ": headz
 #headz[DAFTAR TABEL]
 #v(1cm)

@@ -1,6 +1,7 @@
 // ============================================================
 // AUTO — Daftar kode semu, dibangun otomatis dari #kode-semu()
 // ============================================================
+
 #import "../template/lib.typ": headz
 #headz[DAFTAR KODE SEMU]
 #v(1cm)

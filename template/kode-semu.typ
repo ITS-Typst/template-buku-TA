@@ -14,6 +14,7 @@
 //     5. RETURN cleaned_text
 //     ```
 //   ]
+
 #let kode-semu(caption: "", body) = figure(
   kind: "kode-semu",
   supplement: [Kode Semu],

@@ -1,6 +1,7 @@
 // ============================================================
 // AUTO — Daftar kode sumber, dibangun otomatis dari #kode-sumber()
 // ============================================================
+
 #import "../template/lib.typ": headz
 #headz[DAFTAR KODE SUMBER]
 #v(1cm)

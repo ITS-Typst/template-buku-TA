@@ -71,6 +71,9 @@
       #align(center)[
         #data.institusi.kota, #data.tanggal #data.bulan.id #data.tahun \
         Mahasiswa
+        #place(center, dy: -0.6cm)[
+          #image("../assets/figures/ttd-shutterstock.png", height: 2cm)
+        ]
         #v(1.2cm)
 
         #data.mahasiswa.nama \

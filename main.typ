@@ -11,7 +11,7 @@
 #import "content/04-pernyataan-ai.typ": pernyataan-ai
 #import "content/05-abstrak.typ": halaman-abstrak
 #import "content/06-kata-pengantar.typ": kata-pengantar
-#import "content/15-biodata-penulis.typ": biodata-penulis
+#import "content/16-biodata-penulis.typ": biodata-penulis
 
 // Load metadata dari data.yaml
 #let data = yaml("data.yaml")
@@ -110,14 +110,16 @@
 
 // Bab-bab — edit di content/chapters/01-bab1.typ dst.
 #include "content/chapters/01-bab1.typ"
+// #halaman-kosong(lang: "id")
 
 #include "content/chapters/02-bab2.typ"
 #halaman-kosong(lang: "id")
 
 #include "content/chapters/03-bab3.typ"
+// #halaman-kosong(lang: "id")
 
 #include "content/chapters/04-bab4.typ"
-#halaman-kosong(lang: "id")
+// #halaman-kosong(lang: "id")
 
 #include "content/chapters/05-bab5.typ"
 #halaman-kosong(lang: "id")
@@ -125,11 +127,11 @@
 // #include "content/chapters/06-bab6.typ"
 
 // Daftar Pustaka
-#include "content/13-daftar-pustaka.typ"
+#include "content/14-daftar-pustaka.typ"
 #halaman-kosong(lang: "id")
 
 // Lampiran
-#include "content/14-lampiran.typ"
+#include "content/15-lampiran.typ"
 #halaman-kosong(lang: "id")
 
 // Biodata Penulis — bagian terakhir, blank page tanpa trailing break

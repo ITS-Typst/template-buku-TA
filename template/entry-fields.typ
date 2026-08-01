@@ -2,6 +2,7 @@
 // AUTO — Grid label:nilai untuk abstrak, pernyataan, dll
 // ============================================================
 // entries: array of (label, value) tuples
+
 #let entry-fields(entries, col-widths: (5cm, 0.5cm, 1fr), row-gutter: 4pt, bold-labels: false) = grid(
   columns: col-widths,
   row-gutter: row-gutter,

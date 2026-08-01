@@ -1,6 +1,7 @@
 // ============================================================
 // AUTO — Formatter baris daftar isi (judul + titik-titik + nomor halaman)
 // ============================================================
+
 #let toc-entry-fn(it) = {
   let loc = it.element.location()
   let num = numbering(loc.page-numbering(), ..counter(page).at(loc))

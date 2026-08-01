@@ -1,6 +1,7 @@
 // ============================================================
 // AUTO — Daftar gambar, dibangun otomatis dari #gambar()
 // ============================================================
+
 #import "../template/lib.typ": headz
 #headz[DAFTAR GAMBAR]
 #v(1cm)

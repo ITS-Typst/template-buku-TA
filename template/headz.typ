@@ -1,6 +1,7 @@
 // ============================================================
 // AUTO — Heading tanpa nomor untuk DAFTAR ISI, DAFTAR PUSTAKA, dll
 // ============================================================
+
 #let headz(outlined: true, size: auto, body) = heading(
   level: 1,
   outlined: outlined,

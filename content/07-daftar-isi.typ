@@ -1,6 +1,7 @@
 // ============================================================
 // AUTO — Daftar isi, dibangun otomatis dari heading dokumen
 // ============================================================
+
 #import "../template/lib.typ": headz
 #headz[DAFTAR ISI]
 #v(1cm)

@@ -1,6 +1,7 @@
 // ============================================================
 // OPSIONAL EDIT — Daftar simbol, tambah/hapus baris sesuai kebutuhan
 // ============================================================
+
 #import "../template/lib.typ": headz
 
 #headz[DAFTAR SIMBOL]

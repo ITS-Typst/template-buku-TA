@@ -5,6 +5,7 @@
 //   #kode-sumber(caption: "Judul", ```python
 //   def hello(): pass
 //   ```)
+
 #let kode-sumber(caption: "", body) = figure(
   kind: "kode",
   supplement: [Kode Sumber],

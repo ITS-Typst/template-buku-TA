@@ -4,6 +4,7 @@
 // kegiatan: array of (judul-kegiatan, (bulan-mulai, bulan-selesai))
 // n-bulan: total bulan (default 6)
 // label-kolom: array label kolom bulan
+
 #let timeline-table(kegiatan, n-bulan: 6, label-kolom: none) = {
   let labels = if label-kolom != none {
     label-kolom

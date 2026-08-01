@@ -31,7 +31,6 @@
     justify: true,
     leading: 0.65em,
     spacing: 1.5em,
-    // first-line-indent: 1.25cm,
     linebreaks: "optimized",
   )
 
@@ -86,7 +85,6 @@
   }
 
   show heading.where(level: 2): it => {
-    // v(0.5em, weak: true)
     block(above: 1.2em, below: 0.6em,
       text(size: 13pt, weight: "bold")[
         #counter(heading).display("1.1") #h(0.4em) #it.body
@@ -95,7 +93,6 @@
   }
 
   show heading.where(level: 3): it => {
-    // v(0.3em, weak: true)
     block(above: 1.2em, below: 0.6em,
       text(size: 12pt, weight: "bold")[
         #counter(heading).display("1.1.1") #h(0.4em) #it.body
@@ -104,7 +101,6 @@
   }
 
   show heading.where(level: 4): it => {
-    // v(0.2em, weak: true)
     block(above: 1.2em, below: 0.6em,
       text(size: 12pt, weight: "regular")[
         #counter(heading).display("1.1.1.1") #h(0.4em) #it.body
