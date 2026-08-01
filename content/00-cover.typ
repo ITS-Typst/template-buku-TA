@@ -31,8 +31,8 @@
   block(
     fill: its-white,
     width: 100%,
-    height: 4cm,
-    inset: (left: 2cm, right: 3cm, top: 0.75cm, bottom: 2cm),
+    height: 4.6cm,
+    inset: (left: 2cm, right: 3cm, top: 1cm, bottom: 2cm),
     _logo-full(),
   )
 
