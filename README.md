@@ -30,7 +30,6 @@
 
 ```
 .
-.
 ├── main.typ                    # Entry point
 ├── data.yaml                   # Isi data kamu di sini
 ├── template/                   # Engine template
@@ -96,10 +95,7 @@ tahun: "2026"
 bulan:
   id: "Januari"
   en: "January"
-
-kata-kunci:
-  id: "kata kunci, dipisah, koma"
-  en: "keywords, separated, by comma"
+tanggal: "1"
 ```
 
 > Field `ko-pembimbing` boleh array kosong `[]` jika tidak ada.
